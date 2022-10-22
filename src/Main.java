@@ -38,65 +38,30 @@ public class Main {
 //        System.out.println(i);
 //*/
 ////        float aaa = 15 / 2f;P
-        Saluta();
 
-        int s = Sum(2,3);
-        System.out.println(s);
-        float r = Rest(10,3);
-        System.out.println(r);
-        float o1 = Oper1(-5,8,6);
-        System.out.println(o1);
-        float o2 = Oper2(55,9,9);
-        System.out.println(o2);
-        float o3 = Oper3(20,-3,5,8);
-        System.out.println(o3);
-        float o4 = Oper4(5,15,3,2,8,3);
-        System.out.println(o4);
-        Javi();
-        Smile();
-        float m = Med(1,2,3);
-        System.out.println(m);
-       double d = Distanta(2);
-        System.out.println(d);
-        float t = (float) Temperatura(100);
-        System.out.println(t+" grade Celsius");
-       String v = Viteza(1000,0,6,0);
-        System.out.println(v);
+        LogicalOperations logicOp = new LogicalOperations();
+        int biggest = logicOp.checkBiggerNumber(2,3);
+        String fast = "FastTrackIT";
+        System.out.println("The bigger number is: " + biggest);
+        System.out.println(logicOp.textComp("FastTrackIT"));
+        System.out.println(logicOp.textNumberReturn(fast,1));
+        System.out.println(logicOp.forecast(6));
+        System.out.println(logicOp.numberCompare(2));
+        logicOp.printNumber(32123);
+        System.out.println(logicOp.isNumberEven(9));
+        System.out.println(logicOp.isEligibleToVote(19));
+        System.out.println(logicOp.theMaxNumber(12,9,3));
+        System.out.println(logicOp.theMaxNumber2(12,19,3));
+
     }
     public static void Saluta() {
         System.out.println("Hello \nDebora ");
     }
-    public static int Sum(int first, int second) {
-        int result = first + second;
-        return result;
-    }
 
-    public static float Rest(float first, float second){
-        float result = first%second;
-        return result;
-    }
-    public static float Oper1(float first, float second, float third) {
-        float result = first + second * third;
-        return result;
-    }
-    public static float Oper2(float first, float second, float third) {
-        float result = (first + second) % third;
-        return result;
-    }
-    public static float Oper3(float first, float second, float third,float forth) {
-        float result = first + second * third/forth;
-        return result;
-    }public static float Oper4(float first, float second, float third, float forth, float fifth,float sixth) {
-        float result = first + second / third*forth-fifth%sixth;
-        return result;
-    }
     public static void Javi() {
         System.out.println("   J    a   V     V  a   \n   J   a a   V   V  a a  \nJ  J  aaaaa   V V  aaaaa \n JJ  a     a   V  a     a ");
     }
-    public static float Med(float first, float second, float third) {
-        float result = (first + second + third)/3;
-        return result;
-    }
+
     public static void Smile() {
         System.out.println(" +\"\"\"\"\"+ ");
         System.out.println("[| o o |]");
@@ -105,23 +70,6 @@ public class Main {
         System.out.println(" +-----+" );
 
     }
-    public static double Distanta(float first){
-        double result = first * 0.0254;
-        return result;
-    }
-    public static double  Temperatura(float first){
-       float result = (float) (5.0/9*(first-32));
-        return result;
-    }
-    public static String  Viteza(float distance, int hours, int minutes, int seconds){
-        float result1 = distance / (hours * 3600 + minutes * 60 + seconds);
-        double result2 = result1 * 3.6;
-        float result3 =  result1 * 3600 / 1609;
-        String s= result1+ "  m/s \n" + result2 + "  km/h \n" + result3 + "  mile/h";
-        return s;
-
-    }
-
 
 }
 
